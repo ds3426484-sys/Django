@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Продукты</title>
+    <link rel="stylesheet" href="\static\css\styke.css" />
+</head>
+<body>
+
+    {% include "header.html" %}
+    {% block content %}{% endblock %}
+
+    <h1>Продукты</h1>
+    <menu>
+        <section class="menu-prod container">
+            <div class="content-block">
+                <div class="block">
+                    <div id="mg" class="cart">
+                        <img class="image-cart" src="https://avatars.mds.yandex.net/i?id=b08af48719daad5f1d5d6c407bd99afa_l-5132380-images-thumbs&n=13" alt="">
+                        <p class="info-image-cart">Ваз 2107</p>
+                        <div class="block1" id="blockInfo" onMouseDown="move()" onKeyDown="stop()"></div>
+                    </div>
+                    <div id="mg" class="cart">
+                        <img class="image-cart" src="https://avatars.mds.yandex.net/i?id=5a2c2762112aecee5d93a6277b1bd8dd_l-4078442-images-thumbs&n=13" alt="">
+                        <p class="info-image-cart">Ваз 2109</p>
+                    </div>
+                    <div id="mg" class="cart">
+                        <img class="image-cart" src="https://avatars.mds.yandex.net/i?id=ffb08a885980d962c567df485fb9f9aa_l-16282654-images-thumbs&n=13" alt="">
+                        <p class="info-image-cart">Ваз 2112</p>
+                    </div>
+                </div>
+                <div class="block">
+                    <div id="mg" class="cart">
+                        <img class="image-cart" src="https://a1.drive-data.ru/2d12794s-960.jpg" alt="">
+                        <p class="info-image-cart">Ваз 2114</p>
+                    </div>
+                    <div id="mg" class="cart">
+                        <img class="image-cart" src="https://a1.drive-data.ru/UgAAAgAmfOA-960.jpg" alt="">
+                        <p class="info-image-cart">Лада Приора</p>
+                    </div>
+                    <div id="mg" class="cart">
+                        <img class="image-cart" src="https://avatars.mds.yandex.net/get-autoru-vos/18375018/bd2707f713920349968fb85eb24657b7/320x240" alt="">
+                        <p class="info-image-cart">Лада Гранта</p>
+                    </div>
+                </div>
+                <div class="block">
+                    <div id="mg" class="cart">
+                        <img class="image-cart" src="https://adsboard-static.spectrumdata.tech/images/9b/9bd8e106-a210-4743-a693-f598d55a44cd.jpg" alt="">
+                        <p class="info-image-cart">Лада Ларгус</p>
+                    </div>
+                    <div id="mg" class="cart">
+                        <img class="image-cart" src="https://a1.drive-data.ru/QSTcfKUzhe6y435KrUiKgO7Xmw0-1920.jpg" alt="">
+                        <p class="info-image-cart">Лада Веста</p>
+                    </div>
+                    <div id="mg" class="cart">
+                        <img class="image-cart" src="https://avatars.mds.yandex.net/get-autoru-vos/2165842/59ab8510053c428ec27b3a903422ee20/1200x900" alt="">
+                        <p class="info-image-cart">Хендай акцент</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </menu>
+
+</body>
+</html>

@@ -1,0 +1,305 @@
+/* ============================================
+   1. СБРОС И БАЗОВЫЕ СТИЛИ
+   ============================================ */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+ul, li, a {
+    text-decoration: none;
+    text-transform: none;
+    list-style-type: none;
+}
+
+/* ============================================
+   2. ШАПКА САЙТА (header.html)
+   ============================================ */
+header {
+    margin-top: 15px;
+}
+
+.header-content {
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-radius: 30px;
+    box-shadow: 10px 4px 8px 3px #bbb8b8;
+    background: white;
+}
+
+.ul-link {
+    display: flex;
+    gap: 25px;
+}
+
+.link {
+    cursor: pointer;
+    color: #333;
+    transition: color 0.2s;
+}
+
+.link:hover {
+    color: #e63946;
+}
+
+.log {
+    color: black;
+    cursor: pointer;
+}
+
+/* ============================================
+   3. ОСНОВНОЙ КОНТЕЙНЕР
+   ============================================ */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   4. МЕНЮ КОНТЕНТА (страница товаров)
+   ============================================ */
+.content-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 15px 0 15px;
+    align-items: center;
+}
+
+.content-block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.block {
+    position: relative;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* ============================================
+   5. КАРТОЧКИ ТОВАРОВ (старый стиль)
+   ============================================ */
+.cart {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background-color: rgb(166, 172, 172);
+    border: 3px solid black;
+    z-index: 1;
+}
+
+.image-cart {
+    width: 180px;
+    margin: 5px auto;
+}
+
+.info-image-cart {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* ============================================
+   6. ЗАГОЛОВКИ СТРАНИЦ
+   ============================================ */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* ============================================
+   7. КНОПКИ КАТЕГОРИЙ
+   ============================================ */
+.categories {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.category-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 2px solid #333;
+    background: white;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+
+.category-btn:hover {
+    background: #333;
+    color: white;
+}
+
+.category-btn.active {
+    background: #333;
+    color: white;
+}
+
+/* ============================================
+   8. СЕТКА ТОВАРОВ
+   ============================================ */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* ============================================
+   9. КАРТОЧКА ТОВАРА (новый стиль)
+   ============================================ */
+.product-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #666;
+}
+
+.product-name {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.product-info p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.product-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e63946;
+    margin-top: 10px;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    grid-column: 1 / -1;
+}
+
+/* ============================================
+   10. ФОРМЫ (регистрация, вход)
+   ============================================ */
+.form-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 40px auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group input[type="password"],
+.form-group input[type="date"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #4a90e2;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #357abd;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+/* ============================================
+   11. СООБЩЕНИЯ ОБ УСПЕХЕ / ОШИБКЕ
+   ============================================ */
+.success-message {
+    text-align: center;
+    padding: 40px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+.success-message h1 {
+    color: #2ecc71;
+    margin-bottom: 15px;
+}
+
+.error-message {
+    color: #e63946;
+    background: #ffe5e5;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}

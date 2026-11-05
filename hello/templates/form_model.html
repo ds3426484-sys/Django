@@ -1,0 +1,28 @@
+{% extends "basa.html" %}
+
+{% block content %}
+<div class="form-container">
+    <h1>Регистрация</h1>
+    
+    <form method="POST">
+        {% csrf_token %}
+        
+        <div class="form-group">
+            <label for="id_name">Имя:</label>
+            {{ form.name }}
+        </div>
+        
+        <div class="form-group">
+            <label for="id_surname">Фамилия:</label>
+            {{ form.surname }}
+        </div>
+        
+        <div class="form-group">
+            <label for="id_patronymic">Отчество:</label>
+            {{ form.patronymic }}
+        </div>
+        
+        <button type="submit" class="submit-btn">Отправить</button>
+    </form>
+</div>
+{% endblock %}

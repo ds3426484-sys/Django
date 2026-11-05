@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+
+    {% include "header.html" %}
+
+    <div class="container">
+        <h1>Список товаров</h1>
+        
+        <!-- Кнопки категорий -->
+        <div class="categories">
+            <!-- Кнопка "Все" -->
+            <a href="{% url 'products' %}" 
+               class="category-btn {% if not current_category %}active{% endif %}">
+                Все
+            </a>
+            
+            <!-- Кнопки категорий из базы -->
+            {% for cat in categories %}
+                <a href="?category={{ cat.name }}" 
+                   class="category-btn {% if current_category == cat.name %}active{% endif %}">
+                    {{ cat.name }}
+                </a>
+            {% endfor %}
+        </div>
+
+        <!-- Товары -->
+        <div class="products-grid">
+            {% for product in products %}
+                <div class="product-card">
+                    <div class="product-header">
+                        <span>#{{ product.id }}</span>
+                        <span>{{ product.cat_id.name }}</span>
+                    </div>
+                    <h2 class="product-name">{{ product.name }}</h2>
+                    <div class="product-info">
+                        <p class="product-price">Цена: {{ product.sale }} ₽</p>
+                        <p><strong>Материал:</strong> {{ product.material }}</p>
+                        <p><strong>Остаток:</strong> {{ product.counter }} шт.</p>
+                        <p><strong>Дата производства:</strong> {{ product.date_prod|date:"d.m.Y" }}</p>
+                    </div>
+                </div>
+            {% empty %}
+                <div class="empty-message">
+                    <p>Товаров в этой категории пока нет.</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+</html>

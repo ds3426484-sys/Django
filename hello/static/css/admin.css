@@ -1,0 +1,171 @@
+/* ============================================
+   НЕОНОВЫЙ CYBERPUNK СТИЛЬ
+   ============================================ */
+
+/* Фоновый градиент (заменяет чёрный фон) */
+body, .content-wrapper, .wrapper {
+    background: linear-gradient(135deg, #0000ff 0%, #ff0000 25%, #ff00ff 75%, #00e1ff 100%) !important;
+    min-height: 100vh !important;
+    color: #00d6cb !important;
+}
+
+/* Футер тоже с градиентом */
+.main-footer {
+    background: linear-gradient(135deg, #5353ff 0%, #3e1616 25%, #0f4c5c 75%, #007f8f 100%) !important;
+    color: #ffffff !important;
+}
+
+/* Сайдбар с неоновой границей */
+.main-sidebar {
+    background-color: #0a0a12 !important;
+    border-right: 1px solid #00f3ff44;
+}
+
+/* Активный пункт меню светится */
+.nav-sidebar > .nav-item > .nav-link.active {
+    background-color: #00f3ff15 !important;
+    color: #00f3ff !important;
+    box-shadow: 0 0 15px #00f3ff44;
+    border-left: 3px solid #00f3ff;
+}
+
+/* Заголовки и бренд светятся */
+.brand-link, .content-header h1 {
+    color: #00f3ff !important;
+    text-shadow: 0 0 8px #00f3ff88, 0 0 15px #00f3ff44;
+    letter-spacing: 1px;
+}
+
+/* Карточки и таблицы с неоновой обводкой */
+.card, .info-box {
+    background-color: #0f0f1aee !important;  /* полупрозрачный фон */
+    border: 1px solid #00f3ff33 !important;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.1) !important;
+    backdrop-filter: blur(5px);
+}
+
+/* Заголовки карточек */
+.card-header {
+    background-color: #151525 !important;
+    color: #00f3ff !important;
+    border-bottom: 1px solid #00f3ff44 !important;
+}
+
+/* Заголовки таблиц - магентовый неон */
+.table thead th {
+    border-bottom: 2px solid #ff00ff !important;
+    color: #ff00ff !important;
+    text-shadow: 0 0 6px #ff00ff88;
+    background-color: #151525 !important;
+}
+.table {
+    color: #c0c0d0 !important;
+}
+
+/* Кнопка "Добавить" (зелёная → циановый неон) */
+.btn-success, .btn-primary {
+    background: linear-gradient(135deg, #00f3ff, #0099ff) !important;
+    border-color: #00f3ff !important;
+    color: #000 !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px #00f3ff66;
+    transition: all 0.3s ease;
+}
+.btn-success:hover, .btn-primary:hover {
+    background: linear-gradient(135deg, #0099ff, #00f3ff) !important;
+    box-shadow: 0 0 20px #00f3ff, inset 0 0 10px #00f3ff;
+    color: #fff !important;
+}
+
+/* Кнопка "ИЗМЕНИТЬ" (голубая → магентовый неон) */
+.btn-info {
+    background: linear-gradient(135deg, #ff00ff, #9900ff) !important;
+    border-color: #ff00ff !important;
+    color: #fff !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px #ff00ff66;
+    transition: all 0.3s ease;
+}
+.btn-info:hover {
+    background: linear-gradient(135deg, #9900ff, #ff00ff) !important;
+    box-shadow: 0 0 20px #ff00ff, inset 0 0 10px #ff00ff;
+}
+
+/* Кнопки удаления - красный неон */
+.btn-danger {
+    background-color: #ff0055 !important;
+    border-color: #ff0055 !important;
+    box-shadow: 0 0 10px #ff005566;
+}
+.btn-danger:hover {
+    background-color: #000 !important;
+    color: #ff0055 !important;
+    box-shadow: 0 0 20px #ff0055;
+}
+
+/* Поля ввода */
+.form-control, .select2-selection {
+    background-color: #11111a !important;
+    border: 1px solid #333 !important;
+    color: #00f3ff !important;
+}
+.form-control:focus, .select2-selection--focus {
+    border-color: #ff00ff !important;
+    box-shadow: 0 0 12px #ff00ff66 !important;
+    outline: none;
+}
+
+/* Ссылки */
+a {
+    color: #ff00ff !important;
+    transition: all 0.3s;
+}
+a:hover {
+    color: #00f3ff !important;
+    text-shadow: 0 0 8px #00f3ff;
+}
+
+/* Сообщения (успех/ошибка) */
+.alert-success {
+    background-color: #00ff8822 !important;
+    border: 1px solid #00ff88 !important;
+    color: #00ff88 !important;
+    box-shadow: 0 0 10px #00ff8844;
+}
+
+/* ============================================
+   ХЛЕБНЫЕ КРОШКИ (ПРОЗРАЧНЫЙ ФОН)
+   ============================================ */
+
+/* Хлебные крошки - прозрачный фон */
+.breadcrumbs, .content-header .breadcrumbs {
+    background: rgba(15, 15, 26, 0.5) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 243, 255, 0.2) !important;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+/* Ссылки в хлебных крошках */
+.breadcrumbs a {
+    color: #ff00ff !important;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    color: #00f3ff !important;
+    text-shadow: 0 0 8px #00f3ff;
+}
+
+/* Разделитель в хлебных крошках */
+.breadcrumbs span, .breadcrumbs .separator {
+    color: #c0c0d0 !important;
+}
+
+/* Последний элемент (текущая страница) */
+.breadcrumbs li:last-child, .breadcrumbs .active {
+    color: #ffffff !important;
+    font-weight: bold;
+}

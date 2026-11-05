@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href=" \static\css/styke.css" %" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас</title>
+</head>
+
+<body>
+
+    {% include "header.html" %}
+    {% block content %}{% endblock %}
+
+    <main>
+        <section class="menu container">
+            <div class="content-menu">
+                <div class="information">
+                    <h1 style="font-size:20px; font-weight:bold; ">О пользователе</h1>
+                <p>Имя: Дима</p>
+                <p>Возраст:19</p>
+                <p>Описание:Любит приорики</p>
+                </div>
+                <div class="circle">
+                    <img width=1000
+                    src="https://a1.drive-data.ru/UgAAAgAmfOA-960.jpg">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
