@@ -1,27 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
-    <link rel="stylesheet" href=" \static\css/styke.css" %" />
-
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
-
 <body>
-
     {% include "header.html" %}
-    {% block content %}{% endblock %}
-
-
-
+    
     <main>
-        <h1>Главная страница</h1>
-        <p>Добро пожаловать на сайт.</p>
+        <!-- Главный экран -->
+        <section class="hero">
+            <h1 class="fade-in">Добро пожаловать</h1>
+            <p class="fade-in delay-1">Откройте для себя лучшие товары</p>
+            <a href="/products" class="btn fade-in delay-2">Перейти к товарам</a>
+        </section>
+        
+        <!-- Преимущества -->
+        <section class="features">
+            <div class="feature-card">
+                <h3>Быстрая доставка</h3>
+                <p>Доставим ваш заказ в кратчайшие сроки</p>
+            </div>
+            <div class="feature-card">
+                <h3>Качество</h3>
+                <p>Только проверенные товары от лучших производителей</p>
+            </div>
+            <div class="feature-card">
+                <h3>Гарантия</h3>
+                <p>Полная гарантия на все товары</p>
+            </div>
+        </section>
     </main>
-
-    <h1 ></h1>
 </body>
-
 </html>
