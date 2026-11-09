@@ -1,16 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href=" \static\css/styke.css" %" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Блог</title>
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-
     {% include "header.html" %}
-    {% block content %}{% endblock %}
     
-    <h1>Блог</h1>
+    <main>
+        <section class="page-header">
+            <h1 class="fade-in">Блог</h1>
+            <p class="fade-in delay-1">Полезные статьи, советы и обзоры</p>
+        </section>
+        
+        <!-- Фильтр по категориям -->
+        <section class="blog-filters fade-in delay-1">
+            <a href="#" class="filter-btn active">Все</a>
+            <a href="#" class="filter-btn">Технологии</a>
+            <a href="#" class="filter-btn">Обзоры</a>
+            <a href="#" class="filter-btn">Советы</a>
+            <a href="#" class="filter-btn">Новости</a>
+        </section>
+        
+        <section class="blog-grid">
+            <!-- Статья 1 -->
+            <article class="blog-card fade-in">
+                <div class="blog-image">💻</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-tag">Технологии</span>
+                        <span class="blog-read-time">5 мин чтения</span>
+                    </div>
+                    <h3>Как выбрать лучший гаджет в 2026 году</h3>
+                    <p>Подробный гайд по выбору техники: на что обратить внимание, какие характеристики важны, а какие — маркетинговый ход.</p>
+                    <div class="blog-author">
+                        <div class="author-avatar">А</div>
+                        <div class="author-info">
+                            <span class="author-name">Алексей Петров</span>
+                            <span class="blog-date">9 Ноября 2026</span>
+                        </div>
+                    </div>
+                    <a href="#" class="blog-link">Читать статью →</a>
+                </div>
+            </article>
+            
+            <!-- Статья 2 -->
+            <article class="blog-card fade-in delay-1">
+                <div class="blog-image">🎮</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-tag">Обзоры</span>
+                        <span class="blog-read-time">8 мин чтения</span>
+                    </div>
+                    <h3>Топ-10 игровых аксессуаров этого года</h3>
+                    <p>Собрали лучшие клавиатуры, мыши и гарнитуры для геймеров. Тестировали сами, делимся честными впечатлениями.</p>
+                    <div class="blog-author">
+                        <div class="author-avatar">М</div>
+                        <div class="author-info">
+                            <span class="author-name">Мария Иванова</span>
+                            <span class="blog-date">7 Ноября 2026</span>
+                        </div>
+                    </div>
+                    <a href="#" class="blog-link">Читать статью →</a>
+                </div>
+            </article>
+            
+            <!-- Статья 3 -->
+            <article class="blog-card fade-in delay-2">
+                <div class="blog-image">📱</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-tag">Советы</span>
+                        <span class="blog-read-time">4 мин чтения</span>
+                    </div>
+                    <h3>5 способов продлить жизнь смартфону</h3>
+                    <p>Простые привычки, которые помогут вашему телефону служить дольше. От зарядки до хранения — разбираем всё.</p>
+                    <div class="blog-author">
+                        <div class="author-avatar">Д</div>
+                        <div class="author-info">
+                            <span class="author-name">Дмитрий Сидоров</span>
+                            <span class="blog-date">5 Ноября 2026</span>
+                        </div>
+                    </div>
+                    <a href="#" class="blog-link">Читать статью →</a>
+                </div>
+            </article>
+            
+            <!-- Статья 4 -->
+            <article class="blog-card fade-in">
+                <div class="blog-image">🎧</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-tag">Обзоры</span>
+                        <span class="blog-read-time">6 мин чтения</span>
+                    </div>
+                    <h3>Беспроводные наушники: мифы и реальность</h3>
+                    <p>Разбираем популярные заблуждения о беспроводных наушниках. Действительно ли звук хуже? А батарея?</p>
+                    <div class="blog-author">
+                        <div class="author-avatar">Е</div>
+                        <div class="author-info">
+                            <span class="author-name">Елена Козлова</span>
+                            <span class="blog-date">3 Ноября 2026</span>
+                        </div>
+                    </div>
+                    <a href="#" class="blog-link">Читать статью →</a>
+                </div>
+            </article>
+            
+            <!-- Статья 5 -->
+            <article class="blog-card fade-in delay-1">
+                <div class="blog-image">🔋</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-tag">Технологии</span>
+                        <span class="blog-read-time">7 мин чтения</span>
+                    </div>
+                    <h3>Будущее аккумуляторов: что нас ждет</h3>
+                    <p>Новые технологии батарей, которые изменят всё. Графен, твердотельные элементы и другие прорывы.</p>
+                    <div class="blog-author">
+                        <div class="author-avatar">И</div>
+                        <div class="author-info">
+                            <span class="author-name">Игорь Новиков</span>
+                            <span class="blog-date">1 Ноября 2026</span>
+                        </div>
+                    </div>
+                    <a href="#" class="blog-link">Читать статью →</a>
+                </div>
+            </article>
+            
+            <!-- Статья 6 -->
+            <article class="blog-card fade-in delay-2">
+                <div class="blog-image">🛒</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-tag">Советы</span>
+                        <span class="blog-read-time">3 мин чтения</span>
+                    </div>
+                    <h3>Как не попасться на уловки маркетологов</h3>
+                    <p>Разбираем популярные приемы, которые заставляют нас покупать больше. Учитесь покупать осознанно!</p>
+                    <div class="blog-author">
+                        <div class="author-avatar">О</div>
+                        <div class="author-info">
+                            <span class="author-name">Ольга Белова</span>
+                            <span class="blog-date">29 Октября 2026</span>
+                        </div>
+                    </div>
+                    <a href="#" class="blog-link">Читать статью →</a>
+                </div>
+            </article>
+        </section>
+    </main>
 </body>
 </html>

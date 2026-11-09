@@ -1,16 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Новости</title>
-    <link rel="stylesheet" href=" \static\css/styke.css" %" />
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-
     {% include "header.html" %}
-    {% block content %}{% endblock %}
-
-    <h1>Новости</h1>
+    
+    <main>
+        <section class="page-header">
+            <h1 class="fade-in">Новости</h1>
+            <p class="fade-in delay-1">Будьте в курсе последних событий и обновлений</p>
+        </section>
+        
+        <section class="news-grid">
+            <!-- Новость 1 -->
+            <article class="news-card fade-in">
+                <div class="news-image">📱</div>
+                <div class="news-content">
+                    <div class="news-date">9 Ноября 2026</div>
+                    <h3>Запуск нового мобильного приложения</h3>
+                    <p>Мы рады сообщить о запуске нашего нового мобильного приложения. Теперь покупки стали еще удобнее!</p>
+                    <a href="#" class="news-link">Читать далее →</a>
+                </div>
+            </article>
+            
+            <!-- Новость 2 -->
+            <article class="news-card fade-in delay-1">
+                <div class="news-image">🎉</div>
+                <div class="news-content">
+                    <div class="news-date">5 Ноября 2026</div>
+                    <h3>Черная пятница уже скоро!</h3>
+                    <p>Готовьтесь к самым большим скидкам года. Следите за новостями, чтобы не пропустить выгодные предложения.</p>
+                    <a href="#" class="news-link">Читать далее →</a>
+                </div>
+            </article>
+            
+            <!-- Новость 3 -->
+            <article class="news-card fade-in delay-2">
+                <div class="news-image">🚚</div>
+                <div class="news-content">
+                    <div class="news-date">1 Ноября 2026</div>
+                    <h3>Расширение зоны доставки</h3>
+                    <p>Теперь мы доставляем товары в 50 новых городов. Проверьте, есть ли ваш город в списке.</p>
+                    <a href="#" class="news-link">Читать далее →</a>
+                </div>
+            </article>
+            
+            <!-- Новость 4 -->
+            <article class="news-card fade-in">
+                <div class="news-image">⭐</div>
+                <div class="news-content">
+                    <div class="news-date">28 Октября 2026</div>
+                    <h3>Новая программа лояльности</h3>
+                    <p>Зарабатывайте баллы за каждую покупку и обменивайте их на скидки. Чем больше покупаете, тем больше экономите!</p>
+                    <a href="#" class="news-link">Читать далее →</a>
+                </div>
+            </article>
+            
+            <!-- Новость 5 -->
+            <article class="news-card fade-in delay-1">
+                <div class="news-image">🔒</div>
+                <div class="news-content">
+                    <div class="news-date">25 Октября 2026</div>
+                    <h3>Улучшенная защита данных</h3>
+                    <p>Мы внедрили новые технологии шифрования для максимальной защиты ваших персональных данных.</p>
+                    <a href="#" class="news-link">Читать далее →</a>
+                </div>
+            </article>
+            
+            <!-- Новость 6 -->
+            <article class="news-card fade-in delay-2">
+                <div class="news-image">🎁</div>
+                <div class="news-content">
+                    <div class="news-date">20 Октября 2026</div>
+                    <h3>Подарочные карты теперь доступны</h3>
+                    <p>Идеальный подарок для близких! Покупайте подарочные карты на любую сумму от 500 до 50000 рублей.</p>
+                    <a href="#" class="news-link">Читать далее →</a>
+                </div>
+            </article>
+        </section>
+    </main>
 </body>
 </html>
